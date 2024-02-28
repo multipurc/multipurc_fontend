@@ -1039,73 +1039,177 @@
 							<a href="" class="ppLink wedding"> Wedding  <span> <i class="fa-solid fa-lock"></i> </span></a>
 						</nav>
 					</aside>
-					<main class="price-content">
-						<div id="ecommerce">
-							<div class="toggle">
-								<span class="yearly" style="font-size: 18px; font-weight: 700;">Billed Yearly </span>
-								<div class="toggle-button-cover">
-									<div class="button-cover">
-										<div class="button r" id="button-1">
-											<input type="checkbox" class="checkbox" />
-											<div class="knobs"></div>
-											<div class="layer"></div>
-										</div>
-									</div>
-								</div>
-								<span class="monthly" style="font-size: 18px; font-weight: 700;">Billed Monthly</span>
-							</div>
-							<!-- card data -->
-							<div class="data-info">
-								<div class="cards">
-									<h4>Startup</h4>
-									<h1>৳00</h1>
-									<span>per user, per month</span>
-									<a href="details.html?fromEcommerce=true">
-										<p class="start-btn">Start My 15-day Trial</p>
-									</a>
-									<hr style="border-color: 1px solid; width: 80%; margin: 0 auto;">
-									</hr>
-									<p class="para">
-										5 Social Profiles 5 Scheduled Posts Per Profile 400+ Templates Calendar View
-										24/7
-										Support.
-									</p>
-								</div>
-								<div class="cards">
-									<h4>Business</h4>
-									<h1>৳300</h1>
-									<span>per user, per month</span>
-									<a href="details.html?fromEcommerce=true">
-										<p class="start-btn">Start My 15-day Trial</p>
-									</a>
-									<hr style="border-color: 1px solid; width: 80%; margin: 0 auto;">
-									</hr>
-									<p class="para">
-										10 Social Profiles 25 Scheduled Posts Per Profile 400+ Templates Calendar View
-										24/7
-										VIP
-										Support.
-									</p>
-								</div>
-								<div class="cards">
-									<h4>Agency</h4>
-									<h1>৳500</h1>
-									<span>per user, per month</span>
-									<a href="details.html?fromEcommerce=true">
-										<p class="start-btn">Start My 15-day Trial</p>
-									</a>
-									<hr style="border-color: 1px solid; width: 80%; margin: 0 auto;">
-									</hr>
-									<p class="para">
-										100 Social Profiles 100 Scheduled Posts Per Profile 400+ Templates Calendar View
-										24/7
-										Support.
-									</p>
-								</div>
-							</div>
+					<!-- /*updated pricingCards : by Serajus, pricingCards : css style ref (line: 134 - 157)*/ -->
+					<div class="container">
+						<div class="switch-wrapper">
+						  <input id="monthly" type="radio" name="switch" checked>
+						  <input id="yearly" type="radio" name="switch">
+						  <label for="monthly">Monthly</label>
+						  <label for="yearly">Yearly</label>
+						  <span class="highlighter"></span>
 						</div>
-					
-					</main>
+						<!-- pricingTable -->
+						<div class="table-wrapper">
+						  <table>
+							<thead>
+								<!-- pricingHeader -->
+							  <tr>
+								<th>
+								  <div>
+									Select your plan
+									<div class="svg-wrapper">
+									  <svg viewBox="0 0 24 24">
+										<path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 17v-4h-8v-2h8v-4l6 5-6 5z" />
+									  </svg>
+									</div>
+								  </div>
+								</th>
+								<th>
+								  <div class="heading">Start Up</div>
+								  <div class="info">
+									<div class="price monthly">
+									  <div class="amount">$10 <span>month</span></div>
+									</div>
+									<div class="price yearly hide">
+									  <div class="amount">$7 <span>month</span></div>
+									  <div class="billing-msg">billed annually</div>
+									</div>
+									<button type="button">Get started</button>
+								  </div>
+								</th>
+								<th>
+								  <div class="heading">Business</div>
+								  <div class="info">
+									<div class="popular">Popular</div>
+									<div class="price monthly">
+									  <div class="amount">$22 <span>month</span></div>
+									</div>
+									<div class="price yearly hide">
+									  <div class="amount">$17 <span>month</span></div>
+									  <div class="billing-msg">billed annually</div>
+									</div>
+									<button type="button">Get started</button>
+								  </div>
+								</th>
+								<th>
+								  <div class="heading">Agency</div>
+								  <div class="info">
+									<div class="price monthly">
+									  <div class="amount">$35 <span>month</span></div>
+									</div>
+									<div class="price yearly hide">
+									  <div class="amount">$29 <span>month</span></div>
+									  <div class="billing-msg">billed annually</div>
+					  
+									</div>
+					  
+									<button type="button">Get started</button>
+								  </div>
+								</th>
+							  </tr>
+							</thead>
+							<tbody>
+								<!-- row : socialProfiles -->
+							  <tr>
+								<td>Social Profiles</td>
+								<td style="color: var(--starter);">
+								  5
+								</td>
+								<td style="color: var(--essential);">
+								  10
+								</td>
+								<td style="color: var(--professional);">
+								  100
+								</td>
+							  </tr>
+							  <tr>
+								<!-- row : Scheduled Posts Per Profile -->
+								<td>Scheduled Posts Per Profile</td>
+								<td style="color: var(--starter);">
+								  5
+								</td>
+								<td style="color: var(--essential);">
+								  25
+								</td>
+								<td style="color: var(--professional);">
+								  100
+								</td>
+							  </tr>
+							  <tr>
+								<!-- row : Templates -->
+								<td>Templates</td>
+								<td style="color: var(--starter);">
+								  100+
+								</td>
+								<td style="color: var(--essential);">
+								  200+
+								</td>
+								<td style="color: var(--professional);">
+								  500+
+								</td>
+							  </tr>
+							  <tr>
+								<!-- row : Calendar View -->
+								<td>Calendar View</td>
+								<td>
+								  <svg class="starter" viewBox="0 0 24 24">
+									<path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+								  </svg>
+								</td>
+								<td>
+								  <svg class="essential" viewBox="0 0 24 24">
+									<path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+								  </svg>
+								</td>
+								<td>
+								  <svg class="professional" viewBox="0 0 24 24">
+									<path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+								  </svg>
+								</td>
+							  </tr>
+							  <tr>
+								<!-- row : AI Assistant -->
+								<td>AI Assistant</td>
+								<td>
+								  <svg class="starter" viewBox="0 0 24 24">
+									<path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+								  </svg>
+								</td>
+								<td>
+								  <svg class="essential" viewBox="0 0 24 24">
+									<path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+								  </svg>
+								</td>
+								<td>
+								  <svg class="professional" viewBox="0 0 24 24">
+									<path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+								  </svg>
+								</td>
+							  </tr>
+							  <tr>
+								<!-- row : 24/7 Human Support -->
+								<td>24/7 Human Support</td>
+								<td>
+								  <svg class="not-included" viewBox="0 0 24 24">
+									<path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z" />
+								  </svg>
+								</td>
+								<td>
+								  <svg class="essential" viewBox="0 0 24 24">
+									<path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+								  </svg>
+								</td>
+								<td>
+								  <svg class="professional" viewBox="0 0 24 24">
+									<path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+								  </svg>
+								</td>
+							  </tr>
+							  
+							</tbody>
+						  </table>
+						</div>
+					  </div>
 				</div>
 			</div>
 
