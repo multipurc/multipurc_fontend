@@ -13,23 +13,11 @@ navClose.addEventListener('click', () =>{
    navMenu.classList.remove('show-menu')
 })
 
-/*=============== SEARCH ===============*/
+/*=============== for Mobile device SEARCH ===============*/
 const search = document.getElementById('search'),
       searchBtn = document.getElementById('search-btn'),
       searchClose = document.getElementById('search-close')
 
-/* Search show */
-// searchBtn.addEventListener('click', () =>{
-//    search.classList.add('show-search')
-// })
-
-/* Search hidden */
-// searchClose.addEventListener('click', () =>{
-//    search.classList.remove('show-search')
-// })
-
-
-// for mobile device search icon toggle
 
 function searchToggle() {
     const searchIcon = document.getElementById("search-btn").style.display='none';
@@ -44,6 +32,7 @@ function backToggle() {
     const activeImage = document.getElementById("activeImage").style.display='block';
 }
 
+// for Categorise See all dropdown menu
 document.addEventListener("DOMContentLoaded", function() {
     var sidebar = document.getElementById('sidebar');
 
@@ -52,10 +41,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Check if the clicked element is a dropdown toggle
         if (target) {
-            target.classList.toggle('active'); // Toggle active class on the clicked item
+            target.classList.toggle('active'); 
             var submenu = target.querySelector('.side-dropdown');
 
-            // Toggle the visibility of the dropdown menu
             if (submenu) {
                 submenu.classList.toggle('show');
             }
