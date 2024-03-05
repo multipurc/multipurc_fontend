@@ -496,172 +496,6 @@ li {
 
 /* store end */
 
-/* start select ship */
-.select-ship {
-    background-color: #D9D9D9;
-    border-radius: 6px;
-    padding: 0px 10px;
-    width: 100%;
-}
-
-.select-ship .select-btn {
-    display: flex;
-    height: 50px;
-    font-weight: 400;
-    border-radius: 8px;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-}
-
-.select-ship .select-btn i {
-    font-size: 20px;
-}
-
-.select-ship .ship-options {
-    position: absolute;
-    padding: 10px 20px;
-    /* top: 38%; */
-    left: 21%;
-    margin-top: 5px;
-    border-radius: 8px;
-    background-color: #ddcbcb;
-    transition: all 0.6s;
-    z-index: 48;
-    display: none;
-}
-
-.select-ship.active .ship-options {
-    display: block;
-}
-
-.ship-options .option {
-    display: flex;
-    height: 55px;
-    margin-top: 8px;
-    cursor: pointer;
-    padding: 0 16px;
-    border-radius: 8px;
-    align-items: center;
-    background-color: #fff;
-}
-
-.ship-options .option:hover {
-    background-color: lightblue;
-}
-
-/* end delect ship */
-
-/* select ship order */
-.select-order {
-    background-color: #D9D9D9;
-    border-radius: 6px;
-    padding: 0px 10px;
-    width: 100%;
-}
-
-.select-order .select-btn {
-    display: flex;
-    height: 50px;
-    font-weight: 400;
-    border-radius: 8px;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-}
-
-.select-order .select-btn i {
-    font-size: 20px;
-}
-
-.select-order .order-options {
-    position: absolute;
-    padding: 10px 20px;
-    /* top: 38%; */
-    margin-top: 5px;
-    left: 47%;
-    border-radius: 8px;
-    background-color: #ddcbcb;
-    transition: all 0.6s;
-    z-index: 48;
-    display: none;
-}
-
-.select-order.active .order-options {
-    display: block;
-}
-
-.order-options .option {
-    display: flex;
-    height: 55px;
-    margin-top: 8px;
-    cursor: pointer;
-    padding: 0 16px;
-    border-radius: 8px;
-    align-items: center;
-    background-color: #fff;
-}
-
-.order-options .option:hover {
-    background-color: lightblue;
-}
-
-/* end select ship order */
-/* shipping method */
-.select-method {
-    background-color: #D9D9D9;
-    border-radius: 6px;
-    padding: 0px 10px;
-    width: 100%;
-}
-
-.select-method .select-btn {
-    display: flex;
-    height: 50px;
-    font-weight: 400;
-    border-radius: 8px;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-}
-
-.select-method .select-btn i {
-    font-size: 20px;
-}
-
-.select-method .method-options {
-    position: absolute;
-    padding: 10px 20px;
-    /* top: 38%; */
-    margin-top: 5px;
-    left: 73%;
-    border-radius: 8px;
-    background-color: #ddcbcb;
-    transition: all 0.6s;
-    z-index: 48;
-    display: none;
-}
-
-.select-method.active .method-options {
-    display: block;
-}
-
-.method-options .option {
-    display: flex;
-    height: 55px;
-    margin-top: 8px;
-    cursor: pointer;
-    padding: 0 16px;
-    border-radius: 8px;
-    align-items: center;
-    background-color: #fff;
-}
-
-.method-options .option:hover {
-    background-color: lightblue;
-}
-
-/* end shipping method */
 /* select category */
 .category-content {
     display: flex;
@@ -764,65 +598,6 @@ li {
 
 /* end select category */
 
-
-/* end select price change */
-/* .shipping-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-
-}
-
-.end-shipping-content {
-    background-color: #D9D9D9;
-    margin-top: 12px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    width: 100%;
-    padding: 5px 10px;
-    border-radius: 6px;
-}
-
-.end-shipping-content div {
-    width: 100%;
-}
-
-.category-content {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: px;
-}
-
-.category-content p {
-    width: 20%;
-}
-
-.category-select {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 14px;
-}
-
-.category-content .select-link {
-    position: relative;
-    left: 14px;
-    width: 100%;
-}
-
-.category-select button {
-    width: 20%;
-    outline: none;
-    border: none;
-    background-color: #FFAB0A;
-    padding: 6px 12px;
-    border-radius: 6px;
-    color: white;
-    font-weight: 500;
-} */
-
 /* for popup tab */
 
 .tabContent {
@@ -923,14 +698,6 @@ li {
 
 /* select price end */
 
-/* .tabPannel-title .select-link {
-    width: 160px;
-    height: 55px;
-    display: flex;
-    align-items: center;
-    padding: 5px 10px;
-} */
-
 .tabPannel-title input {
     width: 150px;
     height: 45px;
@@ -982,7 +749,7 @@ li {
     border: 1px solid #ddd;
     text-align: center;
     font-size: 12px;
-    white-space: nowrap;
+
 
 }
 
