@@ -158,20 +158,14 @@ function showPricePannel() {
 	document.getElementById('dashboards').style.display = 'none';
 	document.getElementById('pricePannel').style.display = 'block';
 }
-<<<<<<< HEAD
 
 function showProducts(){
 	document.getElementById('dashboards').style.display = 'none';
 	document.getElementById('pricePannel').style.display = 'none';
 	document.getElementById('products-details').style.display = 'block';
 }
-=======
-//sub main data
-// function showBillBoard() {
-// 	document.getElementById('billboard').style.display = 'block';
-// 	document.getElementById('ecommerce').style.display = 'none';
-// }
->>>>>>> 21807f0d92778f03271cb4da499d84ff9801b2ad
+
+
 
 function showEcommerce() {
 	document.getElementById('billboard').style.display = 'none';
@@ -211,7 +205,7 @@ for (const switchInput of switchInputs) {
     }
   });
 }
-<<<<<<< HEAD
+
 // end pricing pannel
 
 //for dropshipping-products
@@ -364,5 +358,4 @@ function showTab(panelIndex,colorCode) {
     tabPanels[panelIndex].style.backgroundColor=colorCode;
 }
 showTab(0,'#eee');
-=======
->>>>>>> 21807f0d92778f03271cb4da499d84ff9801b2ad
+

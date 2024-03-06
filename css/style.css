@@ -85,9 +85,7 @@ li {
 	padding: 0 6px;
 }
 
-/* #sidebar .brand :hover {
-	background-color: #8D8D8D;
-} */
+
 
 .search-bar {
 	position: relative;
@@ -236,12 +234,8 @@ li {
 	color: white;
 	background-color: #373434;
 }
-
-<<<<<<< HEAD
 /* #sidebar .ads {
-=======
 #sidebar .ads {
->>>>>>> 21807f0d92778f03271cb4da499d84ff9801b2ad
 	width: 100%;
 	padding: 20px;
 }
@@ -286,11 +280,8 @@ li {
 
 #sidebar .ads .wrapper p span {
 	font-weight: 700;
-<<<<<<< HEAD
 } */
-=======
-}
->>>>>>> 21807f0d92778f03271cb4da499d84ff9801b2ad
+
 
 /* SIDEBAR */
 
