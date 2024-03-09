@@ -281,6 +281,7 @@ li {
 #content {
     position: relative;
     width: calc(100% - 260px);
+    padding: 1rem 1.5rem;
     left: 260px;
     transition: all .3s ease;
 }
@@ -292,7 +293,14 @@ li {
 
 nav .toggle-sidebar {
     font-size: 14px;
-    margin-left: 1.7rem;
     cursor: pointer;
+}
+/* for responsive */
+@media screen and (max-width: 999px) {
+	#content {
+		position: relative;
+		width: calc(100% - 60px);
+		transition: all .3s ease;
+	}
 }
 

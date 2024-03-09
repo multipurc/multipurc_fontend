@@ -66,6 +66,42 @@ backIcon.addEventListener('click', function () {
 		})
 	}
 })
+// end sidebar
+
+// for dashboard item click
+
+function showLevel2Dashboard() {
+	document.getElementById('userLevel2-dashboard').style.display = 'block';
+	document.getElementById('userLevel2-posSystem').style.display = 'none';
+}
+function showPosSystem() {
+	document.getElementById('userLevel2-dashboard').style.display = 'none';
+	document.getElementById('userLevel2-posSystem').style.display = 'block';
+}
 
 
 
+/*=============== SHOW MENU ===============*/
+const showMenu = (toggleId, navId) =>{
+	const toggle = document.getElementById(toggleId),
+		  nav = document.getElementById(navId)
+ 
+	toggle.addEventListener('click', () =>{
+		nav.classList.toggle('show-menu')
+		toggle.classList.toggle('show-icon')
+	})
+ }
+ 
+ showMenu('nav-toggle','nav-menu')
+ 
+ 
+//  FOOD ITEM CARD
+
+function addToCart(button) {
+	var foodItem = button.closest('.single-item');
+    var addToCartButton = foodItem.querySelector('.add-to-cart-btn');
+    var chooseContent = foodItem.querySelector('.choose-content');
+
+    addToCartButton.style.display = 'none';
+    chooseContent.style.display = 'block';
+}
