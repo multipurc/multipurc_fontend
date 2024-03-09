@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Work+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tangerine:wght@400;700&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --grey: #F1F0F6;
+    --dark-grey: #8D8D8D;
+    --light: #fff;
+    --dark: #000;
+    --green: #81D43A;
+    --light-green: #E3FFCB;
+    --blue: #1775F1;
+    --light-blue: #D0E4FF;
+    --dark-blue: #0C5FCD;
+    --red: #FC3B56;
+    --darkGreen: #051013;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--light);
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* order tracking */
+#orderTracking {
+    padding: 30px 30px;
+}
+
+.order-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.divider {
+    width: 1px;
+    background: rgb(147, 142, 142);
+    height: 16px;
+    display: block;
+}
+
+.order-date button {
+    background-color: #7161EF;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: .95rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* end order tracking */
+
+/* timeline */
+.process-wrapper {
+    width: 80%;
+}
+
+#progress-bar-container {
+    position: relative;
+    height: 100px;
+    margin-top: 2rem;
+}
+
+#progress-bar-container ul {
+    padding: 0;
+    margin: 0;
+    padding-top: 15px;
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+
+}
+
+#progress-bar-container li:before {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 30px;
+    transition: all ease 0.3s;
+
+}
+
+#progress-bar-container li {
+    list-style: none;
+    float: left;
+    width: 25%;
+    color: #8d8989;
+    font-size: .95rem;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all ease 0.2s;
+    vertical-align: bottom;
+    height: 60px;
+    position: relative;
+    text-align: center;
+}
+
+#progress-bar-container li .step-inner {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-size: .95rem;
+}
+
+#progress-bar-container li.active,
+#progress-bar-container li:hover {
+    color: #00B761;
+}
+
+#progress-bar-container li:after {
+    content: " ";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: #B5B5B5;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-top: 1.2rem;
+    box-shadow: 0 2px 13px -1px rgba(0, 0, 0, 0.3);
+    transition: all ease 0.2s;
+
+}
+
+#progress-bar-container li:hover:after {
+    background: #00B761;
+}
+
+#progress-bar-container li.active:after {
+    background: #00B761;
+}
+
+#progress-bar-container #line #line-progress {
+    width: 76%;
+    margin: 0 auto;
+    background: #d6d3d3;
+    height: 6px;
+    position: absolute;
+    top: 50px;
+    left: 12%;
+    z-index: 1;
+    border-radius: 50px;
+    transition: all ease 0.9s;
+}
+
+/* end timeline */
+
+/* products details info */
+.prodocuts-details {
+    padding-top: 3.5rem;
+    width: 80%;
+    display: grid;
+    gap: .45rem;
+}
+
+.signgle-product-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .95rem;
+}
+
+.signgle-product-data:hover {
+    background-color: #F9FAFB;
+    border-radius: 8px;
+}
+
+.image_info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.phone-detail div {
+    display: flex;
+    gap: .40rem;
+    align-items: center;
+}
+
+.phone-price p {
+    text-align: right;
+}
+
+/* end product details info */
+/* payment history */
+.payment-history {
+    padding: 30px 15px;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   width: 50%;
+}
+/* end payment history */
+
+/* order-summery */
+.order-summery-details{
+    padding: 30px 15px;
+    display: grid;
+   grid-template-columns: repeat(2, 1fr);
+    width: 50%;
+ 
+}
+.need-help{
+    width: 100%;
+}
+.order-summery{
+    width: 100%;
+}
+.summery-content{
+    display: flex;
+    gap: 4rem;
+}
+/* end order summery */
+/* for responsive */
+@media screen and (max-width: 999px) {
+    #content {
+        position: relative;
+        width: calc(100% - 60px);
+        transition: all .3s ease;
+    }
+    .payment-history {
+        width: 80%;
+    }
+    .order-summery-details{
+        width: 80%;
+    }
+}
+
+@media screen and (min-width:272px) and (max-width: 576px) {
+    .order-date {
+        display: block;
+    }
+
+    .order-date button {
+        margin-top: 1rem;
+    }
+
+    .date-info {
+        display: block;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .signgle-product-data {
+        display: grid;
+        gap: .4rem;
+    }
+
+    .image_info {
+        display: grid;
+        gap: .6rem;
+    }
+
+    .phone-price p {
+        text-align: left;
+    }
+    .payment-history {
+        grid-template-columns: repeat(1, 1fr);
+        gap:.75rem;
+    }
+    .order-summery-details{
+        grid-template-columns: repeat(1, 1fr);
+        gap:.75rem;
+        width: 100%;
+    }
+    .summery-content{
+        gap: 2rem;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:577px) and (max-width: 768px) {
+    .order-date {
+        display: block;
+    }
+
+    .order-date button {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width:272px) and (max-width: 628px) {
+    #progress-bar-container li:after {
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width:272px) and (max-width:320px) {
+    .phone-detail div {
+        display: block;
+    }
+}
