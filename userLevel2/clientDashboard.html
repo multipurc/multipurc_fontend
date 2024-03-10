@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
     <link rel="stylesheet" href="./css/posSystem.css">
     <link rel="stylesheet" href="./css/clientDashboard.css">
 
@@ -62,7 +63,7 @@
         <!-- side menu css lines(162-273)-->
         <ul class="side-menu">
             <!-- js lines(73-80) -->
-            <li onclick="showLevel2Dashboard()"><a href="" class="active"><i
+            <li style="display: none;" onclick="showLevel2Dashboard()"><a href="" class="active"><i
                         style="font-size: 15px;" class='bx bxs-dashboard icon'></i>
                     <span>Dashboard</span></a>
             </li>
@@ -308,13 +309,13 @@
         </nav>
         <!-- main content -->
         <!-- dashboard -->
-        <div id="userLevel2-dashboard">
+        <div id="userLevel2-dashboard" style="display: none;">
             <h2>userLevel2 Dashboard</h2>
         </div>
         <!-- end dashboard -->
 
         <!-- pos system css file(posSystem.css) and js(clientDashboard.js) css lines(43-344) -->
-        <div id="userLevel2-posSystem" style="display: none;">
+        <div id="userLevel2-posSystem">
             <div class="posSystem-container">
                 <!-- item content css lines(51-291) -->
                 <div class="left-content">
@@ -417,188 +418,195 @@
                         <div class="food-content">
                             <div class="single-item">
                                 <div style=" padding: .35rem;">
-                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img onclick="showPopupContent()" style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUDMhPpndCvGlsF_NF-j1olBZVn9Gg8QDerw&usqp=CAU"
                                         alt="" srcset="">
                                 </div>
                                 <p
-                                    style="font-weight: 600; font-size: .95rem; position: relative; top: .35rem; padding: 0rem .25rem ;">
+                                    style="font-weight: 600; font-size: .95rem; padding: .15remrem .30rem ;">
                                     Stir-fried noodls <span style="color: #BCBDBD; font-weight: 600;">($31.0)</span></p>
-                                <!-- addtoCart btn js lines(100-107)-->
-                                <button onclick="addToCart(this)" id="addToCart" class="add-to-cart-btn"><span>Add
-                                        Item</span><span class="plus-icon">+</span></button>
-                                <!-- end add to cart btn -->
-                                <div class="choose-content" id="chooseContent" style="display: none;">
-                                    <button class="choose"><span>Choose</span><span
-                                            class="checkmark-circle-icon">&#10003;</span></button>
-                                    <button class="select-number"
-                                        style="background-color: #F8F8F8;"><span>-</span><span>2</span><span>+</span></button>
-                                </div>
                             </div>
                             <div class="single-item">
                                 <div style=" padding: .35rem;">
-                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img onclick="showPopupContent()" style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUDMhPpndCvGlsF_NF-j1olBZVn9Gg8QDerw&usqp=CAU"
                                         alt="" srcset="">
                                 </div>
                                 <p
-                                    style="font-weight: 600; font-size: .95rem; position: relative; top: .35rem; padding: 0rem .25rem ;">
+                                    style="font-weight: 600; font-size: .95rem; padding: .15remrem .30rem ;">
                                     Stir-fried noodls <span style="color: #BCBDBD; font-weight: 600;">($31.0)</span></p>
-                                <!-- addtoCart btn -->
-                                <button onclick="addToCart(this)" id="addToCart" class="add-to-cart-btn"><span>Add
-                                        Item</span><span class="plus-icon">+</span></button>
-                                <!-- end add to cart btn -->
-                                <div class="choose-content" id="chooseContent" style="display: none;">
-                                    <button class="choose"><span>Choose</span><span
-                                            class="checkmark-circle-icon">&#10003;</span></button>
-                                    <button class="select-number"
-                                        style="background-color: #F8F8F8;"><span>-</span><span>2</span><span>+</span></button>
-                                </div>
                             </div>
                             <div class="single-item">
                                 <div style=" padding: .35rem;">
-                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img onclick="showPopupContent()" style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUDMhPpndCvGlsF_NF-j1olBZVn9Gg8QDerw&usqp=CAU"
                                         alt="" srcset="">
                                 </div>
                                 <p
-                                    style="font-weight: 600; font-size: .95rem; position: relative; top: .35rem; padding: 0rem .25rem ;">
+                                    style="font-weight: 600; font-size: .95rem; padding: .15remrem .30rem ;">
                                     Stir-fried noodls <span style="color: #BCBDBD; font-weight: 600;">($31.0)</span></p>
-                                <!-- addtoCart btn -->
-                                <button onclick="addToCart(this)" id="addToCart" class="add-to-cart-btn"><span>Add
-                                        Item</span><span class="plus-icon">+</span></button>
-                                <!-- end add to cart btn -->
-                                <div class="choose-content" id="chooseContent" style="display: none;">
-                                    <button class="choose"><span>Choose</span><span
-                                            class="checkmark-circle-icon">&#10003;</span></button>
-                                    <button class="select-number"
-                                        style="background-color: #F8F8F8;"><span>-</span><span>2</span><span>+</span></button>
-                                </div>
                             </div>
                             <div class="single-item">
                                 <div style=" padding: .35rem;">
-                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img onclick="showPopupContent()" style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUDMhPpndCvGlsF_NF-j1olBZVn9Gg8QDerw&usqp=CAU"
                                         alt="" srcset="">
                                 </div>
                                 <p
-                                    style="font-weight: 600; font-size: .95rem; position: relative; top: .35rem; padding: 0rem .25rem ;">
+                                    style="font-weight: 600; font-size: .95rem; padding: .15remrem .30rem ;">
                                     Stir-fried noodls <span style="color: #BCBDBD; font-weight: 600;">($31.0)</span></p>
-                                <!-- addtoCart btn -->
-                                <button onclick="addToCart(this)" id="addToCart" class="add-to-cart-btn"><span>Add
-                                        Item</span><span class="plus-icon">+</span></button>
-                                <!-- end add to cart btn -->
-                                <div class="choose-content" id="chooseContent" style="display: none;">
-                                    <button class="choose"><span>Choose</span><span
-                                            class="checkmark-circle-icon">&#10003;</span></button>
-                                    <button class="select-number"
-                                        style="background-color: #F8F8F8;"><span>-</span><span>2</span><span>+</span></button>
-                                </div>
                             </div>
                             <div class="single-item">
                                 <div style=" padding: .35rem;">
-                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img onclick="showPopupContent()" style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUDMhPpndCvGlsF_NF-j1olBZVn9Gg8QDerw&usqp=CAU"
                                         alt="" srcset="">
                                 </div>
                                 <p
-                                    style="font-weight: 600; font-size: .95rem; position: relative; top: .35rem; padding: 0rem .25rem ;">
+                                    style="font-weight: 600; font-size: .95rem; padding: .15remrem .30rem ;">
                                     Stir-fried noodls <span style="color: #BCBDBD; font-weight: 600;">($31.0)</span></p>
-                                <!-- addtoCart btn -->
-                                <button onclick="addToCart(this)" id="addToCart" class="add-to-cart-btn"><span>Add
-                                        Item</span><span class="plus-icon">+</span></button>
-                                <!-- end add to cart btn -->
-                                <div class="choose-content" id="chooseContent" style="display: none;">
-                                    <button class="choose"><span>Choose</span><span
-                                            class="checkmark-circle-icon">&#10003;</span></button>
-                                    <button class="select-number"
-                                        style="background-color: #F8F8F8;"><span>-</span><span>2</span><span>+</span></button>
-                                </div>
                             </div>
                             <div class="single-item">
                                 <div style=" padding: .35rem;">
-                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img onclick="showPopupContent()" style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUDMhPpndCvGlsF_NF-j1olBZVn9Gg8QDerw&usqp=CAU"
                                         alt="" srcset="">
                                 </div>
                                 <p
-                                    style="font-weight: 600; font-size: .95rem; position: relative; top: .35rem; padding: 0rem .25rem ;">
+                                    style="font-weight: 600; font-size: .95rem; padding: .15remrem .30rem ;">
                                     Stir-fried noodls <span style="color: #BCBDBD; font-weight: 600;">($31.0)</span></p>
-                                <!-- addtoCart btn -->
-                                <button onclick="addToCart(this)" id="addToCart" class="add-to-cart-btn"><span>Add
-                                        Item</span><span class="plus-icon">+</span></button>
-                                <!-- end add to cart btn -->
-                                <div class="choose-content" id="chooseContent" style="display: none;">
-                                    <button class="choose"><span>Choose</span><span
-                                            class="checkmark-circle-icon">&#10003;</span></button>
-                                    <button class="select-number"
-                                        style="background-color: #F8F8F8;"><span>-</span><span>2</span><span>+</span></button>
-                                </div>
                             </div>
                             <div class="single-item">
                                 <div style=" padding: .35rem;">
-                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img onclick="showPopupContent()" style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUDMhPpndCvGlsF_NF-j1olBZVn9Gg8QDerw&usqp=CAU"
                                         alt="" srcset="">
                                 </div>
                                 <p
-                                    style="font-weight: 600; font-size: .95rem; position: relative; top: .35rem; padding: 0rem .25rem ;">
+                                    style="font-weight: 600; font-size: .95rem; padding: .15remrem .30rem ;">
                                     Stir-fried noodls <span style="color: #BCBDBD; font-weight: 600;">($31.0)</span></p>
-                                <!-- addtoCart btn -->
-                                <button onclick="addToCart(this)" id="addToCart" class="add-to-cart-btn"><span>Add
-                                        Item</span><span class="plus-icon">+</span></button>
-                                <!-- end add to cart btn -->
-                                <div class="choose-content" id="chooseContent" style="display: none;">
-                                    <button class="choose"><span>Choose</span><span
-                                            class="checkmark-circle-icon">&#10003;</span></button>
-                                    <button class="select-number"
-                                        style="background-color: #F8F8F8;"><span>-</span><span>2</span><span>+</span></button>
-                                </div>
                             </div>
                             <div class="single-item">
                                 <div style=" padding: .35rem;">
-                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img onclick="showPopupContent()" style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUDMhPpndCvGlsF_NF-j1olBZVn9Gg8QDerw&usqp=CAU"
                                         alt="" srcset="">
                                 </div>
                                 <p
-                                    style="font-weight: 600; font-size: .95rem; position: relative; top: .35rem; padding: 0rem .25rem ;">
+                                    style="font-weight: 600; font-size: .95rem; padding: .15remrem .30rem ;">
                                     Stir-fried noodls <span style="color: #BCBDBD; font-weight: 600;">($31.0)</span></p>
-                                <!-- addtoCart btn -->
-                                <button onclick="addToCart(this)" id="addToCart" class="add-to-cart-btn"><span>Add
-                                        Item</span><span class="plus-icon">+</span></button>
-                                <!-- end add to cart btn -->
-                                <div class="choose-content" id="chooseContent" style="display: none;">
-                                    <button class="choose"><span>Choose</span><span
-                                            class="checkmark-circle-icon">&#10003;</span></button>
-                                    <button class="select-number"
-                                        style="background-color: #F8F8F8;"><span>-</span><span>2</span><span>+</span></button>
-                                </div>
                             </div>
                             <div class="single-item">
                                 <div style=" padding: .35rem;">
-                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img onclick="showPopupContent()" style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUDMhPpndCvGlsF_NF-j1olBZVn9Gg8QDerw&usqp=CAU"
                                         alt="" srcset="">
                                 </div>
                                 <p
-                                    style="font-weight: 600; font-size: .95rem; position: relative; top: .35rem; padding: 0rem .25rem ;">
+                                    style="font-weight: 600; font-size: .95rem; padding: .15remrem .30rem ;">
                                     Stir-fried noodls <span style="color: #BCBDBD; font-weight: 600;">($31.0)</span></p>
-                                <!-- addtoCart btn -->
-                                <button onclick="addToCart(this)" id="addToCart" class="add-to-cart-btn"><span>Add
-                                        Item</span><span class="plus-icon">+</span></button>
-                                <!-- end add to cart btn -->
-                                <div class="choose-content" id="chooseContent" style="display: none;">
-                                    <button class="choose"><span>Choose</span><span
-                                            class="checkmark-circle-icon">&#10003;</span></button>
-                                    <button class="select-number"
-                                        style="background-color: #F8F8F8;"><span>-</span><span>2</span><span>+</span></button>
-                                </div>
                             </div>
                         </div>
                         <!-- end food items card -->
                     </div>
                     <!-- end menu items -->
+                    <!-- for whole popup contents css (291-885) and just popup js (200-211)-->
+                    <div class="product-wrapper">
+                        <div class="project_wrap">
+                            <div class="  shadow"></div>
+                            <div class="project">
+                                <div class="headers">
+                                    <div class="title">Product Variation</div>
+                                    <div class="icons">
+                                        <span class=" close_btn">
+                                            <ion-icon name="close-outline" class="i"></ion-icon>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="product-model">
+                                        <img id="image1"
+                                            style="border-radius: .64rem; width: 100%; height: 80%; cursor: pointer;"
+                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUDMhPpndCvGlsF_NF-j1olBZVn9Gg8QDerw&usqp=CAU"
+                                            alt="" srcset="">
+                                        <img id="image2" onclick="showImageTwo()"
+                                            style="border-radius: .64rem; width: 100%; height: 80%; cursor: pointer; display: none;"
+                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKDT5xvqZx3Z59CevGd_BIOAOVlkTb2bc7KQ&usqp=CAU"
+                                            alt="" srcset="">
+                                        <img id="image3" onclick="showImageThree()"
+                                            style="border-radius: .64rem; width: 100%; height: 80%; cursor: pointer; display: none;"
+                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcK-SofoMWKAAKA3Cf4q8uF_JRYFMxShFMVw&usqp=CAU"
+                                            alt="" srcset="">
+                                        <img id="image4" onclick="showImageFour()"
+                                            style="border-radius: .64rem; width: 100%; height: 80%; cursor: pointer; display: none;"
+                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHUW9GlUs0mx4T5UxSPndlPOx9RlUTqSf2_u_uWI0vt9ma6VN6M8gdrrC_QNaNztPD1og&usqp=CAU"
+                                            alt="" srcset="">
+
+                                        <div class="more-product-collect">
+                                            <img onclick="showImageOne()"
+                                                style="border-radius: .30rem; width: 60px; height: 60px; cursor: pointer;"
+                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUDMhPpndCvGlsF_NF-j1olBZVn9Gg8QDerw&usqp=CAU"
+                                                alt="" srcset="">
+                                            <img onclick="showImageTwo()"
+                                                style="border-radius: .30rem; width: 60px; height: 60px; cursor: pointer;"
+                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKDT5xvqZx3Z59CevGd_BIOAOVlkTb2bc7KQ&usqp=CAU"
+                                                alt="" srcset="">
+                                            <img onclick="showImageThree()"
+                                                style="border-radius: .30rem; width: 60px; height: 60px; cursor: pointer;"
+                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcK-SofoMWKAAKA3Cf4q8uF_JRYFMxShFMVw&usqp=CAU"
+                                                alt="" srcset="">
+                                            <img onclick="showImageFour()"
+                                                style="border-radius: .30rem; width: 60px; height: 60px; cursor: pointer;"
+                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHUW9GlUs0mx4T5UxSPndlPOx9RlUTqSf2_u_uWI0vt9ma6VN6M8gdrrC_QNaNztPD1og&usqp=CAU"
+                                                alt="" srcset="">
+                                        </div>
+                                    </div>
+                                    <div class="product-details">
+                                        <p style="font-size: 1.1rem; font-weight: 600;">Stir-fried noodls</p>
+                                        <p style="font-size: .95rem; font-weight: 600; padding: .35rem 0rem;">$31.0</p>
+                                        <div
+                                            style="display: flex; gap:2.9rem; align-items: center; font-size: .95rem; font-weight: 500;">
+                                            <p>Color:</p>
+                                            <div style="display: flex; gap:1rem; align-items: center;">
+                                                <p
+                                                    style="background-color: #F8F8F8; padding: .20rem .50rem; border-radius: 1.2rem; cursor: pointer;">
+                                                    white</p>
+                                                <p
+                                                    style="background-color: #F8F8F8; padding: .20rem .50rem; border-radius: 1.2rem; cursor: pointer;">
+                                                    Black</p>
+                                            </div>
+                                        </div>
+                                        <div
+                                        style="display: flex; gap:3.6rem; align-items: center; font-size: .95rem; font-weight: 500; padding: .75rem 0rem;">
+                                        <p>Size:</p>
+                                        <div style="display: flex; gap:1rem; align-items: center;">
+                                            <p
+                                                style="background-color: #F8F8F8; padding: .20rem .50rem; border-radius:100%; cursor: pointer;">
+                                                S</p>
+                                            <p
+                                                style="background-color: #F8F8F8; padding: .20rem .50rem; border-radius:100%; cursor: pointer;">
+                                                M</p>
+                                                <p
+                                                style="background-color: #F8F8F8; padding: .20rem .50rem; border-radius:100%; cursor: pointer;">
+                                                L</p>
+                                        </div>
+                                    </div>
+                                        <div
+                                            style="display: flex; gap:2.9rem; align-items: center; font-size: .95rem; font-weight: 500; padding: .15rem 0rem;">
+                                            <p>Quantity:</p>
+                                            <div class="choose-content" id="chooseContent" >
+                                                <button class="select-number"
+                                                    style="background-color: #F8F8F8;"><span style="background-color: #667085; display: flex; justify-content: center; align-items: center; color: #fff; border-radius: 100%; width: 16px; height: 16px;">-</span><span>2</span><span style="background-color: #667085; display: flex; justify-content: center; align-items: center; color: #fff; border-radius: 100%; width: 16px; height: 16px;">+</span></button>
+                                            </div>
+                                        </div>
+                                        <button onclick="addToCart(this)" id="addToCart" class="add-to-cart-btn"><span>Add
+                                        To Cart</span><span class="plus-icon">+</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end popup -->
                 </div>
                 <!-- item content end -->
 
@@ -693,17 +701,72 @@
                             <p>Total</p>
                             <p>$15.00</p>
                         </div>
-                        <button class="place-order">Place Order</button>
+                        <button onclick="showOrderPopup()" class="place-order">Place Order</button>
                     </div>
                     <!-- end payment summery -->
+                 
                 </div>
                 <!-- end cart content -->
             </div>
         </div>
         <!-- end pos system -->
         <!-- end main content -->
+        <div id="toast-container"></div>
+        <!-- order place popup content -->
+        <div class="product-wrappers">
+            <div class="project_wrap">
+                <div class="  shadow"></div>
+                <div class="project">
+                    <div class="headers">
+                        <div onclick="printInvoice()" class="title">
+                            <span >Print Invoice</span>
+                           </div>
+                       <div class="icons">
+                        <span class=" close_btn">
+                            Close
+                        </span>
+                       </div>
+                    </div>
+                    <div class="container"   id="invoiceContent">
+                        <p style="text-align: center; font-size: 1.2rem; font-weight: 600;">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        </p>
+                        <div class="payment-summery" style="padding-top: 1rem;">
+                            <p style=" font-size: 1rem; font-weight: 600;">Stir-fried noodls</p>
+                            <div class="summery-content" style="padding-top: .30rem;">
+                                <div class="left-summery">
+                                    <div
+                                        style=" display: flex; flex-direction: column; gap: .75rem; font-size: .95rem; color: #667085; font-weight: 500;">
+                                        <p>Price</p>
+                                        <p>Taxes</p>
+                                        <p>Discount</p>
+                                    </div>
+                                </div>
+                                <div class="right-summery">
+                                    <div
+                                        style=" display: flex; flex-direction: column; gap: .75rem; font-size: .95rem; color: #667085; font-weight: 500;">
+                                        <p>$10.00</p>
+                                        <p>$2.00</p>
+                                        <p>$3.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr style="margin-top: .75rem;">
+                            </hr>
+                            <div
+                                style="display: flex; gap: 5.8rem; font-size: .95rem; margin-top: .35rem; font-weight: 500;">
+                                <p>Total</p>
+                                <p>$15.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end popup -->
     </section>
-
+<!-- Include html2pdf.js -->
+<script src="path/to/html2pdf.bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="./js/clientDashboard.js"></script>
