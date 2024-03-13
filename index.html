@@ -9,6 +9,7 @@
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 	<link rel="stylesheet" href="./css/pricePannel.css">
+	<link rel="stylesheet" href="./css/products.css">
 	<link rel="stylesheet" href="./css/style.css">
 	<title>Active eCommerce</title>
 </head>
@@ -106,7 +107,6 @@
 					<li class="seller-product">
 						<a href="#" class="aiz-side-nav-link">
 							<span>Seller Product</span>
-
 						</a>
 						<ul class="sub-dropdown">
 							<li class="aiz-side-nav-item">
@@ -272,7 +272,11 @@
 					<span class="aiz-side-nav-text">Price Pannel</span>
 				</a>
 			</li>
-
+			<li onclick="showProducts()"><a href="#" class="active"> <i
+						class="material-icons-outlined icon">extension</i>
+					Dropshipping Products <i id="iconPlaceholder" class="material-icons-outlined icon-right"></i>
+				</a></li>
+		</ul>
 	</section>
 	<!-- SIDEBAR -->
 
@@ -1012,7 +1016,7 @@
 					</div>
 				</div>
 			</div>
-
+			<!-- for price pannel -->
 			<div id="pricePannel" style="display: none;">
 				<div class="menu-icon" id="sidebarToggle">
 					<span class="material-icons-outlined">menu</span>
@@ -1022,6 +1026,34 @@
 						<!-- pricePlanNavs -->
 						<!-- /*updated panel : by Serajus, pricePlanNavs : css style ref (line: 134 - 157)*/ -->
 						<nav class="pricePlanNavs">
+							<a href="" class="ppLink ecom"> Ecommerce <span> <i class="fa-solid fa-lock"></i>
+								</span></a>
+							<a href="" class="ppLink portfolio"> Portfolio <span> <i class="fa-solid fa-lock"></i>
+								</span></a>
+							<a href="" class="ppLink agency"> Agency <span> <i class="fa-solid fa-lock"></i> </span></a>
+							<a href="" class="ppLink article"> Article <span> <i class="fa-solid fa-lock"></i>
+								</span></a>
+							<a href="" class="ppLink bbShop"> Barbar Shop <span> <i class="fa-solid fa-lock"></i>
+								</span></a>
+							<a href="" class="ppLink constr"> Construction <span> <i class="fa-solid fa-lock"></i>
+								</span></a>
+							<a href="" class="ppLink constl"> Consultancy <span> <i class="fa-solid fa-lock"></i>
+								</span></a>
+							<a href="" class="ppLink donation"> Donation <span> <i class="fa-solid fa-lock"></i>
+								</span></a>
+							<a href="" class="ppLink event"> Event <span> <i class="fa-solid fa-lock"></i> </span></a>
+							<a href="" class="ppLink jobFind"> Job Find <span> <i class="fa-solid fa-lock"></i>
+								</span></a>
+							<a href="" class="ppLink newpaper"> Newspaper <span> <i class="fa-solid fa-lock"></i>
+								</span></a>
+							<a href="" class="ppLink photoG"> Photography <span> <i class="fa-solid fa-lock"></i>
+								</span></a>
+							<a href="" class="ppLink business"> Business <span> <i class="fa-solid fa-lock"></i>
+								</span></a>
+							<a href="" class="ppLink support"> Support <span> <i class="fa-solid fa-lock"></i>
+								</span></a>
+							<a href="" class="ppLink wedding"> Wedding <span> <i class="fa-solid fa-lock"></i>
+								</span></a>
 							<a href="" class="ppLink ecom"> Ecommerce  <span> <i class="fa-solid fa-lock"></i> </span></a>
 							<a href="" class="ppLink portfolio"> Portfolio  <span> <i class="fa-solid fa-lock"></i> </span></a>
 							<a href="" class="ppLink agency"> Agency  <span> <i class="fa-solid fa-lock"></i> </span></a>
@@ -1042,6 +1074,926 @@
 					<!-- /*updated pricingCards : by Serajus, pricingCards : css style ref (line: 134 - 157)*/ -->
 					<div class="container">
 						<div class="switch-wrapper">
+							<input id="monthly" type="radio" name="switch" checked>
+							<input id="yearly" type="radio" name="switch">
+							<label for="monthly">Monthly</label>
+							<label for="yearly">Yearly</label>
+							<span class="highlighter"></span>
+						</div>
+						<!-- pricingTable -->
+						<div class="table-wrapper">
+							<table>
+								<thead>
+									<!-- pricingHeader -->
+									<tr>
+										<th>
+											<div>
+												Select your plan
+												<div class="svg-wrapper">
+													<svg viewBox="0 0 24 24">
+														<path
+															d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 17v-4h-8v-2h8v-4l6 5-6 5z" />
+													</svg>
+												</div>
+											</div>
+										</th>
+										<th>
+											<div class="heading">Start Up</div>
+											<div class="info">
+												<div class="price monthly">
+													<div class="amount">$10 <span>month</span></div>
+												</div>
+												<div class="price yearly hide">
+													<div class="amount">$7 <span>month</span></div>
+													<div class="billing-msg">billed annually</div>
+												</div>
+												<button type="button">Get started</button>
+											</div>
+										</th>
+										<th>
+											<div class="heading">Business</div>
+											<div class="info">
+												<div class="popular">Popular</div>
+												<div class="price monthly">
+													<div class="amount">$22 <span>month</span></div>
+												</div>
+												<div class="price yearly hide">
+													<div class="amount">$17 <span>month</span></div>
+													<div class="billing-msg">billed annually</div>
+												</div>
+												<button type="button">Get started</button>
+											</div>
+										</th>
+										<th>
+											<div class="heading">Agency</div>
+											<div class="info">
+												<div class="price monthly">
+													<div class="amount">$35 <span>month</span></div>
+												</div>
+												<div class="price yearly hide">
+													<div class="amount">$29 <span>month</span></div>
+													<div class="billing-msg">billed annually</div>
+
+												</div>
+
+												<button type="button">Get started</button>
+											</div>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<!-- row : socialProfiles -->
+									<tr>
+										<td>Social Profiles</td>
+										<td style="color: var(--starter);">
+											5
+										</td>
+										<td style="color: var(--essential);">
+											10
+										</td>
+										<td style="color: var(--professional);">
+											100
+										</td>
+									</tr>
+									<tr>
+										<!-- row : Scheduled Posts Per Profile -->
+										<td>Scheduled Posts Per Profile</td>
+										<td style="color: var(--starter);">
+											5
+										</td>
+										<td style="color: var(--essential);">
+											25
+										</td>
+										<td style="color: var(--professional);">
+											100
+										</td>
+									</tr>
+									<tr>
+										<!-- row : Templates -->
+										<td>Templates</td>
+										<td style="color: var(--starter);">
+											100+
+										</td>
+										<td style="color: var(--essential);">
+											200+
+										</td>
+										<td style="color: var(--professional);">
+											500+
+										</td>
+									</tr>
+									<tr>
+										<!-- row : Calendar View -->
+										<td>Calendar View</td>
+										<td>
+											<svg class="starter" viewBox="0 0 24 24">
+												<path
+													d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+											</svg>
+										</td>
+										<td>
+											<svg class="essential" viewBox="0 0 24 24">
+												<path
+													d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+											</svg>
+										</td>
+										<td>
+											<svg class="professional" viewBox="0 0 24 24">
+												<path
+													d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+											</svg>
+										</td>
+									</tr>
+									<tr>
+										<!-- row : AI Assistant -->
+										<td>AI Assistant</td>
+										<td>
+											<svg class="starter" viewBox="0 0 24 24">
+												<path
+													d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+											</svg>
+										</td>
+										<td>
+											<svg class="essential" viewBox="0 0 24 24">
+												<path
+													d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+											</svg>
+										</td>
+										<td>
+											<svg class="professional" viewBox="0 0 24 24">
+												<path
+													d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+											</svg>
+										</td>
+									</tr>
+									<tr>
+										<!-- row : 24/7 Human Support -->
+										<td>24/7 Human Support</td>
+										<td>
+											<svg class="not-included" viewBox="0 0 24 24">
+												<path
+													d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z" />
+											</svg>
+										</td>
+										<td>
+											<svg class="essential" viewBox="0 0 24 24">
+												<path
+													d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+											</svg>
+										</td>
+										<td>
+											<svg class="professional" viewBox="0 0 24 24">
+												<path
+													d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+											</svg>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end price pannel -->
+
+			<!-- for dropshipping products  _by rita-->
+			<!-- this sections css file is (products.css) and js in (script.js) file.-->
+			<div id="products-details" style="display: none;">
+				<!-- whole class (content-data) css in (52-167) -->
+				<div class="content-data">
+					<div class="container-data">
+						<!-- css (68-115) and js (185-191)-->
+						<div class="select-menu">
+							<div class="select-btn">
+								<span class="sBtn-text">All Categories</span>
+								<i class="bx bx-chevron-down"></i>
+							</div>
+							<ul class="options">
+								<li class="option">
+									<span class="option-text">Github</span>
+								</li>
+								<li class="option">
+									<span class="option-text">Instagram</span>
+								</li>
+							</ul>
+						</div>
+						<!--end -->
+						<div class="divider"></div>
+						<div class="search-bar"
+							style="display: flex; align-items: center; justify-content: flex-start;">
+							<i class='bx bx-search search-icon'></i>
+							<input type="text" class="search-input" placeholder="Search by Product Name">
+						</div>
+					</div>
+					<div class="filters-data">
+						<p class="filters" style="display: flex; align-items: center; gap: 6px;"><i
+								class="fas fa-filter"></i><span>Filters</span></p>
+						<p class="saved" style="display: flex; align-items: center; gap: 6px;"><i
+								class="fas fa-heart"></i><span>Saved</span></p>
+					</div>
+				</div>
+				<!-- products card, css in (170-252) -->
+				<div class="products-card">
+					<div class="single-card">
+						<div class="topper-icon">
+							<div class="crown-icon">
+								<p style="display: flex; align-items: center; gap: 6px;"><i
+										class="fas fa-crown"></i><span class="divide"></span><span>Winner</span></p>
+							</div>
+							<img src="./img/favicon (1).png" alt="" srcset="">
+						</div>
+						<div style="display: flex; justify-content: center; align-items: center; padding: 0px 6px;">
+							<img width="180" src="./img/image.png" alt="" srcset="">
+						</div>
+						<h2>Apple</h2>
+						<p style="margin-top: 8px;">
+							2020 Apple MacBook Air Laptop: Apple M1 Chip, 13”
+						</p>
+						<div class="price">
+							<h4>৳1024000</h4>
+							<button style="padding: 3px 7px; border-radius: 4px; font-weight: 500;">35%
+								Off</button>
+						</div>
+						<hr style="margin-top: 12px;">
+						</hr>
+						<div class="varified">
+							<p style="display: flex; align-items: center; gap: 5px;">
+								<i id="" class="material-icons-outlined "
+									style="color: #18A661; border: none; outline: none; border-radius: 100%; ">check_circle</i>
+								<span>Varified</span>
+							</p>
+							<div>
+								<span style="color: rgb(80, 77, 77); font-size: 15px;">16 views</span>
+								<div style="display: flex; align-items: center;">
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+								</div>
+							</div>
+						</div>
+						<div class="import-btn">
+							<p onclick="showProductsPopup()"
+								style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+								<span>Import</span><span class="up-right-arrow-icon"> <i
+										class="fas fa-arrow-up"></i></span>
+							</p>
+							<img src="./img/Secondary green.png" alt="" srcset="">
+						</div>
+					</div>
+					<div class="single-card">
+						<div class="topper-icon">
+							<div class="crown-icon">
+								<p style="display: flex; align-items: center; gap: 6px;"><i
+										class="fas fa-crown"></i><span class="divide"></span><span>Winner</span></p>
+							</div>
+							<img src="./img/favicon (1).png" alt="" srcset="">
+						</div>
+						<div style="display: flex; justify-content: center; align-items: center; padding: 0px 6px;">
+							<img width="180" src="./img/image.png" alt="" srcset="">
+						</div>
+						<h2>Apple</h2>
+						<p style="margin-top: 8px;">
+							2020 Apple MacBook Air Laptop: Apple M1 Chip, 13”
+						</p>
+						<div class="price">
+							<h4>৳1024000</h4>
+							<button style="padding: 3px 7px; border-radius: 4px; font-weight: 500;">35%
+								Off</button>
+						</div>
+						<hr style="margin-top: 12px;">
+						</hr>
+						<div class="varified">
+							<p style="display: flex; align-items: center; gap: 5px;">
+								<i id="" class="material-icons-outlined "
+									style="color: #18A661; border: none; outline: none; border-radius: 100%; ">check_circle</i>
+								<span>Varified</span>
+							</p>
+							<div>
+								<span style="color: rgb(80, 77, 77); font-size: 15px;">16 views</span>
+								<div style="display: flex; align-items: center;">
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+								</div>
+							</div>
+						</div>
+						<div class="import-btn">
+							<p onclick="showProductsPopup()"
+								style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+								<span>Import</span><span class="up-right-arrow-icon"> <i
+										class="fas fa-arrow-up"></i></span>
+							</p>
+							<img src="./img/Secondary green.png" alt="" srcset="">
+						</div>
+					</div>
+					<div class="single-card">
+						<div class="topper-icon">
+							<div class="crown-icon">
+								<p style="display: flex; align-items: center; gap: 6px;"><i
+										class="fas fa-crown"></i><span class="divide"></span><span>Winner</span></p>
+							</div>
+							<img src="./img/favicon (1).png" alt="" srcset="">
+						</div>
+						<div style="display: flex; justify-content: center; align-items: center; padding: 0px 6px;">
+							<img width="180" src="./img/image.png" alt="" srcset="">
+						</div>
+						<h2>Apple</h2>
+						<p style="margin-top: 8px;">
+							2020 Apple MacBook Air Laptop: Apple M1 Chip, 13”
+						</p>
+						<div class="price">
+							<h4>৳1024000</h4>
+							<button style="padding: 3px 7px; border-radius: 4px; font-weight: 500;">35%
+								Off</button>
+						</div>
+						<hr style="margin-top: 12px;">
+						</hr>
+						<div class="varified">
+							<p style="display: flex; align-items: center; gap: 5px;">
+								<i id="" class="material-icons-outlined "
+									style="color: #18A661; border: none; outline: none; border-radius: 100%; ">check_circle</i>
+								<span>Varified</span>
+							</p>
+							<div>
+								<span style="color: rgb(80, 77, 77); font-size: 15px;">16 views</span>
+								<div style="display: flex; align-items: center;">
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+								</div>
+							</div>
+						</div>
+						<div class="import-btn">
+							<p onclick="showProductsPopup()"
+								style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+								<span>Import</span><span class="up-right-arrow-icon"> <i
+										class="fas fa-arrow-up"></i></span>
+							</p>
+							<img src="./img/Secondary green.png" alt="" srcset="">
+						</div>
+					</div>
+					<div class="single-card">
+						<div class="topper-icon">
+							<div class="crown-icon">
+								<p style="display: flex; align-items: center; gap: 6px;"><i
+										class="fas fa-crown"></i><span class="divide"></span><span>Winner</span></p>
+							</div>
+							<img src="./img/favicon (1).png" alt="" srcset="">
+						</div>
+						<div style="display: flex; justify-content: center; align-items: center; padding: 0px 6px;">
+							<img width="180" src="./img/image.png" alt="" srcset="">
+						</div>
+						<h2>Apple</h2>
+						<p style="margin-top: 8px;">
+							2020 Apple MacBook Air Laptop: Apple M1 Chip, 13”
+						</p>
+						<div class="price">
+							<h4>৳1024000</h4>
+							<button style="padding: 3px 7px; border-radius: 4px; font-weight: 500;">35%
+								Off</button>
+						</div>
+						<hr style="margin-top: 12px;">
+						</hr>
+						<div class="varified">
+							<p style="display: flex; align-items: center; gap: 5px;">
+								<i id="" class="material-icons-outlined "
+									style="color: #18A661; border: none; outline: none; border-radius: 100%; ">check_circle</i>
+								<span>Varified</span>
+							</p>
+							<div>
+								<span style="color: rgb(80, 77, 77); font-size: 15px;">16 views</span>
+								<div style="display: flex; align-items: center;">
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+								</div>
+							</div>
+						</div>
+						<div class="import-btn">
+							<p onclick="showProductsPopup()"
+								style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+								<span>Import</span><span class="up-right-arrow-icon"> <i
+										class="fas fa-arrow-up"></i></span>
+							</p>
+							<img src="./img/Secondary green.png" alt="" srcset="">
+						</div>
+					</div>
+					<div class="single-card">
+						<div class="topper-icon">
+							<div class="crown-icon">
+								<p style="display: flex; align-items: center; gap: 6px;"><i
+										class="fas fa-crown"></i><span class="divide"></span><span>Winner</span></p>
+							</div>
+							<img src="./img/favicon (1).png" alt="" srcset="">
+						</div>
+						<div style="display: flex; justify-content: center; align-items: center; padding: 0px 6px;">
+							<img width="180" src="./img/image.png" alt="" srcset="">
+						</div>
+						<h2>Apple</h2>
+						<p style="margin-top: 8px;">
+							2020 Apple MacBook Air Laptop: Apple M1 Chip, 13”
+						</p>
+						<div class="price">
+							<h4>৳1024000</h4>
+							<button style="padding: 3px 7px; border-radius: 4px; font-weight: 500;">35%
+								Off</button>
+						</div>
+						<hr style="margin-top: 12px;">
+						</hr>
+						<div class="varified">
+							<p style="display: flex; align-items: center; gap: 5px;">
+								<i id="" class="material-icons-outlined "
+									style="color: #18A661; border: none; outline: none; border-radius: 100%; ">check_circle</i>
+								<span>Varified</span>
+							</p>
+							<div>
+								<span style="color: rgb(80, 77, 77); font-size: 15px;">16 views</span>
+								<div style="display: flex; align-items: center;">
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+								</div>
+							</div>
+						</div>
+						<div class="import-btn">
+							<p onclick="showProductsPopup()"
+								style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+								<span>Import</span><span class="up-right-arrow-icon"> <i
+										class="fas fa-arrow-up"></i></span>
+							</p>
+							<img src="./img/Secondary green.png" alt="" srcset="">
+						</div>
+					</div>
+					<div class="single-card">
+						<div class="topper-icon">
+							<div class="crown-icon">
+								<p style="display: flex; align-items: center; gap: 6px;"><i
+										class="fas fa-crown"></i><span class="divide"></span><span>Winner</span></p>
+							</div>
+							<img src="./img/favicon (1).png" alt="" srcset="">
+						</div>
+						<div style="display: flex; justify-content: center; align-items: center; padding: 0px 6px;">
+							<img width="180" src="./img/image.png" alt="" srcset="">
+						</div>
+						<h2>Apple</h2>
+						<p style="margin-top: 8px;">
+							2020 Apple MacBook Air Laptop: Apple M1 Chip, 13”
+						</p>
+						<div class="price">
+							<h4>৳1024000</h4>
+							<button style="padding: 3px 7px; border-radius: 4px; font-weight: 500;">35%
+								Off</button>
+						</div>
+						<hr style="margin-top: 12px;">
+						</hr>
+						<div class="varified">
+							<p style="display: flex; align-items: center; gap: 5px;">
+								<i id="" class="material-icons-outlined "
+									style="color: #18A661; border: none; outline: none; border-radius: 100%; ">check_circle</i>
+								<span>Varified</span>
+							</p>
+							<div>
+								<span style="color: rgb(80, 77, 77); font-size: 15px;">16 views</span>
+								<div style="display: flex; align-items: center;">
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+								</div>
+							</div>
+						</div>
+						<div class="import-btn">
+							<p onclick="showProductsPopup()"
+								style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+								<span>Import</span><span class="up-right-arrow-icon"> <i
+										class="fas fa-arrow-up"></i></span>
+							</p>
+							<img src="./img/Secondary green.png" alt="" srcset="">
+						</div>
+					</div>
+					<div class="single-card">
+						<div class="topper-icon">
+							<div class="crown-icon">
+								<p style="display: flex; align-items: center; gap: 6px;"><i
+										class="fas fa-crown"></i><span class="divide"></span><span>Winner</span></p>
+							</div>
+							<img src="./img/favicon (1).png" alt="" srcset="">
+						</div>
+						<div style="display: flex; justify-content: center; align-items: center; padding: 0px 6px;">
+							<img width="180" src="./img/image.png" alt="" srcset="">
+						</div>
+						<h2>Apple</h2>
+						<p style="margin-top: 8px;">
+							2020 Apple MacBook Air Laptop: Apple M1 Chip, 13”
+						</p>
+						<div class="price">
+							<h4>৳1024000</h4>
+							<button style="padding: 3px 7px; border-radius: 4px; font-weight: 500;">35%
+								Off</button>
+						</div>
+						<hr style="margin-top: 12px;">
+						</hr>
+						<div class="varified">
+							<p style="display: flex; align-items: center; gap: 5px;">
+								<i id="" class="material-icons-outlined "
+									style="color: #18A661; border: none; outline: none; border-radius: 100%; ">check_circle</i>
+								<span>Varified</span>
+							</p>
+							<div>
+								<span style="color: rgb(80, 77, 77); font-size: 15px;">16 views</span>
+								<div style="display: flex; align-items: center;">
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+								</div>
+							</div>
+						</div>
+						<div class="import-btn">
+							<p onclick="showProductsPopup()"
+								style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+								<span>Import</span><span class="up-right-arrow-icon"> <i
+										class="fas fa-arrow-up"></i></span>
+							</p>
+							<img src="./img/Secondary green.png" alt="" srcset="">
+						</div>
+					</div>
+					<div class="single-card">
+						<div class="topper-icon">
+							<div class="crown-icon">
+								<p style="display: flex; align-items: center; gap: 6px;"><i
+										class="fas fa-crown"></i><span class="divide"></span><span>Winner</span></p>
+							</div>
+							<img src="./img/favicon (1).png" alt="" srcset="">
+						</div>
+						<div style="display: flex; justify-content: center; align-items: center; padding: 0px 6px;">
+							<img width="180" src="./img/image.png" alt="" srcset="">
+						</div>
+						<h2>Apple</h2>
+						<p style="margin-top: 8px;">
+							2020 Apple MacBook Air Laptop: Apple M1 Chip, 13”
+						</p>
+						<div class="price">
+							<h4>৳1024000</h4>
+							<button style="padding: 3px 7px; border-radius: 4px; font-weight: 500;">35%
+								Off</button>
+						</div>
+						<hr style="margin-top: 12px;">
+						</hr>
+						<div class="varified">
+							<p style="display: flex; align-items: center; gap: 5px;">
+								<i id="" class="material-icons-outlined "
+									style="color: #18A661; border: none; outline: none; border-radius: 100%; ">check_circle</i>
+								<span>Varified</span>
+							</p>
+							<div>
+								<span style="color: rgb(80, 77, 77); font-size: 15px;">16 views</span>
+								<div style="display: flex; align-items: center;">
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+								</div>
+							</div>
+						</div>
+						<div class="import-btn">
+							<p onclick="showProductsPopup()"
+								style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+								<span>Import</span><span class="up-right-arrow-icon"> <i
+										class="fas fa-arrow-up"></i></span>
+							</p>
+							<img src="./img/Secondary green.png" alt="" srcset="">
+						</div>
+					</div>
+				</div>
+				<!-- end products card -->
+				<!-- pagination css (255-278)-->
+				<div class="pagination">
+					<a href="#" class="active">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#" class="next">Next</a>
+				</div>
+				<!-- end pagination -->
+				<!-- for whole popup contents css (291-885) and just popup js (200-211)-->
+				<div class="product-wrapper">
+					<div class="project_wrap">
+						<div class="shadow close_btn"></div>
+						<div class="project">
+							<div class="headers">
+								<div class="title">Listing</div>
+								<div class="icons">
+									<span class=" close_btn">
+										<ion-icon name="close-outline" class="i"></ion-icon>
+									</span>
+								</div>
+							</div>
+							<div class="container">
+								<div>
+									<div class="list-content">
+										<p style="font-weight: 500;"><span style="color:rgba(27, 67, 77, 1);">*</span>
+											Store:</p>
+										<div class="single-list">
+											<!-- select-link class css (438-495) and js (214-228) -->
+											<div class="select-link">
+												<div class="select-data">
+													<img width="30" height="30"
+														src="https://media.istockphoto.com/id/1458215547/photo/brown-bear.webp?b=1&s=612x612&w=0&k=20&c=iYDAbb3cqlONzwOkwDfGKrJFNrDT3GtHenKwvNyaXoQ="
+														alt="" srcset="">
+													<div class="select-btn">
+														<span class="sBtn-text">https:www.linkdin.com</span>
+														<i class="bx bx-chevron-down"></i>
+													</div>
+												</div>
+												<ul class="link-options">
+													<li class="option">
+														<span class="option-text">https:www.facebook.com</span>
+													</li>
+													<li class="option">
+														<span class="option-text">https:www.linkdin.com</span>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- select category css (560-597) and js (281-295) -->
+									<div class="category-content" style="margin-top: 20px;">
+										<p style="font-weight: 500;">
+											<span style="color:rgba(27, 67, 77, 1);">* </span>SelectCategory:
+										</p>
+										<div class="category-select">
+											<div class="selects-category">
+												<div class="select-btn">
+													<span class="sBtn-text">Please select</span>
+													<i class="bx bx-chevron-down"></i>
+												</div>
+												<ul class="category-options">
+													<li class="option">
+														<span class="option-text">Github</span>
+													</li>
+													<li class="option">
+														<span class="option-text">Instagram</span>
+													</li>
+												</ul>
+											</div>
+											<p><button>Sync All</button></p>
+										</div>
+									</div>
+									<!-- end selelct category -->
+
+									<!-- products import popup tab content, js (315-331) -->
+									<div class="">
+										<!-- tabContent css start (603 line) -->
+										<div class="tabContent">
+											<div class="buttonContent">
+												<button onclick="showTab(0,'#eee')">
+													<p style="font-weight: 500;"><span
+															style="color: rgba(27, 67, 77, 1)">*</span>
+														Variants</p>
+												</button>
+												<button onclick="showTab(1,'#eee')">
+													<p style="font-weight: 500;"><span
+															style="color: rgba(27, 67, 77, 1)">*</span>
+														Reviews</p>
+												</button>
+											</div>
+											<!-- for variants -->
+											<div class="tabPanels">
+												<div class="tabPannel-title">
+													<p style="font-weight: 500;">Buk Revise</p>
+													<!-- selelct price css (648-697) -->
+													<div class="select-price">
+														<div class="select-btn">
+															<span class="sBtn-text">Price Change</span>
+															<i class="bx bx-chevron-down"></i>
+														</div>
+														<ul class="price-options">
+															<li class="option">
+																<span class="option-text">12000</span>
+															</li>
+															<li class="option">
+																<span class="option-text">20000</span>
+															</li>
+														</ul>
+													</div>
+													<div>
+														<input type="text" name="" id="">
+													</div>
+													<button class="ok">Ok</button>
+													<button class="recommend">Recommend Listing Price <i
+															style="color: #fff; margin-left: 3px;"
+															class="far fa-question-circle"></i></button>
+												</div>
+												<!-- table css (737-772)-->
+												<div class="tabPannel-table">
+													<table class="table">
+														<thead>
+															<tr>
+																<th>
+																	<span style="font-size: 12px;">
+																		<i style="color: rgba(27, 67, 77, 1); position: relative; right:5px; font-size: 12px;"
+																		class="far fa-check-square"></i>
+																		Image</span>
+																</th>
+																<th>SKU</th>
+																<th>CJ Color</th>
+																<th>RRP<i
+																		style="color: rgba(27, 67, 77, 1); margin-left: 3px;"
+																		class="far fa-question-circle"></i></th>
+																<th>CJ Price</th>
+																<th>Shipping Fee<i
+																		style="color: rgba(27, 67, 77, 1); margin-left: 3px;"
+																		class="far fa-question-circle"></i></th>
+																<th>Service Fee<i
+																		style="color: rgba(27, 67, 77, 1); margin-left: 3px;"
+																		class="far fa-question-circle"></i></th>
+																<th>Total Dropshipping Cost</th>
+																<th><sup
+																		style="color: rgba(27, 67, 77, 1); margin-right: 3px;">*</sup>Your
+																	Price
+																</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td data-label="Image">
+																	<img class="just-image" width="40" height="40"
+																		src="https://media.istockphoto.com/id/1458215547/photo/brown-bear.webp?b=1&s=612x612&w=0&k=20&c=iYDAbb3cqlONzwOkwDfGKrJFNrDT3GtHenKwvNyaXoQ="
+																		alt="" srcset="">
+																</td>
+																<td data-label="SKU">CJLX91933701AZ</td>
+																<td data-label="CJ Color">8018 Smart Love</td>
+																<td data-label="RRP">$10.36</br><span
+																		style="color: gray;">Estimated
+																		Profit 1051%</span></td>
+																<td data-label="CJ Price">$0.90</td>
+																<td data-label="Shipping Fee"><span
+																		style="color: rgba(27, 67, 77, 1); font-weight: 600;">$1.81<i
+																			style=" margin-left: 3px;"
+																			class="fas fa-exclamation-circle"></i></span></br>CJPacket
+																	L..</td>
+																<td data-label="Service Fee"
+																	style="color: rgba(27, 67, 77, 1); font-weight: 600;">
+																	$0.25</td>
+																<td data-label="Total Dropshipping Cost">$2.96</td>
+																<td data-label="Price"><input type="text" name="" id="">
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<!-- end table -->
+											</div>
+											<!-- end variants -->
+
+											<!-- reviews css (727-877)-->
+											<div class="tabPanels">
+												<h4>Select Reviews to import</h4>
+												<div class="reviews-title">
+													<div style="display: flex; align-items: center; gap: 20px;">
+														<div class="checkbox-container">
+															<input type="checkbox" id="myCheckbox">
+															<label for="myCheckbox"></label>
+														</div>
+														<span style="margin-top: 12px">All</span>
+													</div>
+													<div style="display: flex; align-items: center; gap: 20px;">
+														<div class="checkbox-container">
+															<input type="checkbox" id="fiveStarsCheckbox">
+															<label for="fiveStarsCheckbox"></label>
+														</div>
+														<span style="margin-top: 12px">5 Stars</span>
+													</div>
+													<div style="display: flex; align-items: center; gap: 20px;">
+														<div class="checkbox-container">
+															<input type="checkbox" id="fourStarsCheckbox">
+															<label for="fourStarsCheckbox"></label>
+														</div>
+														<span style="margin-top: 12px">4 Stars</span>
+													</div>
+													<div style="display: flex; align-items: center; gap: 20px;">
+														<div class="checkbox-container">
+															<input type="checkbox" id="threeStarsCheckbox">
+															<label for="threeStarsCheckbox"></label>
+														</div>
+														<span style="margin-top: 12px">3 Stars</span>
+													</div>
+													<div style="display: flex; align-items: center; gap: 20px;">
+														<div class="checkbox-container">
+															<input type="checkbox" id="twoStarsCheckbox">
+															<label for="twoStarsCheckbox"></label>
+														</div>
+														<span style="margin-top: 12px">2 Stars</span>
+													</div>
+													<div style="display: flex; align-items: center; gap: 20px;">
+														<div class="checkbox-container">
+															<input type="checkbox" id="oneStarCheckbox">
+															<label for="oneStarCheckbox"></label>
+														</div>
+														<span style="margin-top: 12px">1 Star</span>
+													</div>
+												</div>
+												<div style="display: flex;  gap: 7px; margin-top: 18px;">
+													<i style="color: #FFAB0A; margin-top: 5px;"
+														class="fas fa-exclamation-circle"></i>
+													<p>
+														Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+														Debitis, accusamus? Magni corporis enim, hic necessitatibus,
+														sint neque iure delectus, sed illum voluptatibus repellat ipsa
+														deserunt iusto ex? Magnam, fugiat alias.
+													</p>
+												</div>
+												<div class="reviews-container" style="margin-top: 25px;">
+													<div class="review-card">
+														<p>G****d</p>
+														<div>
+															<div style="display: flex; align-items: center;">
+																<i class="material-icons-outlined star-icon"
+																	style="color: #FFAB0A;">star</i>
+																<i class="material-icons-outlined star-icon"
+																	style="color: #FFAB0A;">star</i>
+																<i class="material-icons-outlined star-icon"
+																	style="color: #FFAB0A;">star</i>
+																<i class="material-icons-outlined star-icon"
+																	style="color: #FFAB0A;">star</i>
+																<i class="material-icons-outlined star-icon"
+																	style="color: #FFAB0A;">star</i>
+															</div>
+															<p style="margin-top: 5px;">
+																Lorem ipsum dolor, sit amet consectetur adipisicing
+																elit. Debitis, accusamus.
+															</p>
+														</div>
+													</div>
+													<div class="review-card">
+														<p>M****d</p>
+														<div>
+															<div style="display: flex; align-items: center;">
+																<i class="material-icons-outlined star-icon"
+																	style="color: #FFAB0A;">star</i>
+																<i class="material-icons-outlined star-icon"
+																	style="color: #FFAB0A;">star</i>
+																<i class="material-icons-outlined star-icon"
+																	style="color: #FFAB0A;">star</i>
+																<i class="material-icons-outlined star-icon"
+																	style="color: #FFAB0A;">star</i>
+																<i class="material-icons-outlined star-icon"
+																	style="color: #FFAB0A;">star</i>
+															</div>
+															<p style="margin-top: 5px;">
+																Lorem ipsum dolor, sit amet consectetur adipisicing
+																elit. Debitis, accusamus.
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- reviews end -->
+
+											<!-- fottter btn css(830-865) -->
+											<div class="footer-btn" style="margin-top: 16px; margin-bottom: 16px;">
+												<p class="cancel_btn close_btn">
+													<button style="color: rgba(27, 67, 77, 1); font-weight: 500;">
+														Cancel
+													</button>
+												</p>
+												<p class="list-btn">
+													<button style="color: white;">
+														List It Now
+													</button>
+												</p>
+												<p class="edit-btn">
+													<button style="color: white;">
+														Edit Before Listing
+													</button>
+												</p>
+											</div>
+											<!-- fotter btn end -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end popup -->
+			</div>
+			<!-- for dropshipping products -->
 						  <input id="monthly" type="radio" name="switch" checked>
 						  <input id="yearly" type="radio" name="switch">
 						  <label for="monthly">Monthly</label>

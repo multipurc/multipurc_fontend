@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Work+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tangerine:wght@400;700&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --grey: #F1F0F6;
+    --dark-grey: #8D8D8D;
+    --light: #fff;
+    --dark: #000;
+    --green: #81D43A;
+    --light-green: #E3FFCB;
+    --blue: #1775F1;
+    --light-blue: #D0E4FF;
+    --dark-blue: #0C5FCD;
+    --red: #FC3B56;
+    --darkGreen: #051013;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* for forgot password */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+section .container {
+    max-width: 50%;
+    width: 100%;
+    max-height: 75%;
+    height: 100%;
+    background-color: #fbfafa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 12px;
+}
+/* logo */
+.lock-logo {
+    position: relative;
+}
+
+.circle-background {
+    width: 70px;
+    height: 70px;
+    background-color: #D9D9D9;
+    border-radius: 100%;
+    position: relative;
+}
+
+.inner-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 56px;
+    height: 56px;
+    background-color: #1B434D;
+    border-radius: 100%;
+    color: #fff;
+}
+
+.lock-icon {
+    display: inline-block;
+}
+
+.star-line span{
+    font-size: 10px;
+    border-bottom: 1px solid #fff; 
+}
+/* end logo */
+
+.title{
+    text-align: center;
+    padding-top: .50rem;
+    display: flex;
+    flex-direction: column;
+    gap:.30rem;
+}
+
+/* email-container */
+.email-container {
+    position: relative;
+    width: 100%;
+    max-width: 375px;
+    padding-top: 1.6rem;
+}
+.email-container label {
+    font-weight: 600;
+    font-size: .95rem;
+    color: #848484;
+}
+
+.email-container input {
+    width: 100%;
+    margin: 0 auto;
+    height: 3rem;
+    padding-left: 1rem;
+    border: 2px solid rgb(156, 163, 175);
+    border-radius: .65rem;
+    box-sizing: border-box;
+    margin-top: 8px;
+}
+/* email conatiner end */
+
+/* submit btn */
+#submitButton{
+    max-width: 375px;
+    width: 100%;
+}
+.submit-button {
+    background-color: #1B434D;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    height: 3rem;
+    width: 100%;
+    border-radius: .65rem;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+}
+/* submit btn */
+/* end forgot password */
+
+/* wrong email page */
+
+.wrongEmail-container {
+    position: relative;
+    width: 100%;
+    max-width: 375px;
+    padding-top: 1.8rem;
+}
+.wrongEmail-container label {
+    font-weight: 600;
+    font-size: .95rem;
+    color: #FF0000;
+}
+
+.wrongEmail-container input {
+    width: 100%;
+    margin: 0 auto;
+    height: 3rem;
+    padding-left: 1rem;
+    border: 2px solid #FF0000;
+    outline-color: #FF0000;;
+    border-radius: .65rem;
+    box-sizing: border-box;
+    margin-top: 8px;
+}
+.wrongEmail-container p{
+    color: #FF0000;
+    font-size: .75rem;
+    padding: .30rem 0rem;
+}
+
+/* end wrong email page */
+
+/* reset password page */
+
+section .resetPass-container {
+    max-width: 50%;
+    width: 100%;
+    max-height: 95%;
+    height: 100%;
+    background-color: #fbfafa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 12px;
+   
+}
+.password-container label {
+    font-weight: 600;
+    font-size: .95rem;
+    color: #848484;
+}
+.password-container {
+    position: relative;
+    width: 100%;
+    max-width: 375px;
+    padding-top: 1rem;
+}
+
+.password-container input {
+    width: 100%;
+    margin: 0 auto;
+    height: 3rem;
+    padding-left: 1rem;
+    border: 2px solid rgb(156, 163, 175);
+    border-radius: .65rem;
+    box-sizing: border-box;
+    margin-top: 8px;
+}
+
+.password-container i {
+    position: absolute;
+    top: 76%;
+    right: 1rem;
+    transform: translateY(-50%);
+}
+
+.password-container span {
+    color: rgb(62, 61, 61);
+    display: flex;
+    justify-content: end;
+    padding-top: 4px;
+    font-size: .85rem;
+}
+.password-rules{
+    position: relative;
+    width: 100%;
+    max-width: 375px;
+    padding-top: .90rem;
+}
+.rules-item{
+    padding: .65rem 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: .30rem;
+    color: #848484;
+    font-size: .90rem;
+}
+/* end reset password */
+/* for responsive */
+@media screen and (min-width:272px) and (max-width:768px){
+
+  /* forgot password */
+  section{
+    padding: 16px;
+   }
+    section .container,
+    section .resetPass-container {
+        max-width: 100%;
+    }
+  /* end forgot password */
+
+  
+}
